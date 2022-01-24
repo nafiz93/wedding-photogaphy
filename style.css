@@ -1,3 +1,59 @@
 .bg-first-cont{
     background-color: white;
 }
+
+
+.crad{
+    cursor: pointer;
+}
+
+.front,.back{
+  
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform .6s linear;
+  }
+  
+  .front{
+    transform:  rotateY(0deg);
+  }
+  .back{
+    background-image: linear-gradient(
+        #c6ffdd,
+    
+        #fbd786,
+        
+        #f7797d);
+    transform:  rotateY(180deg);
+  }
+  .back-content{
+    color: #2c3e50;
+    text-align: center;
+    
+  }
+  .sm{
+    margin: 20px 0;
+  }
+  .sm a{
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    color: #2c3e50;
+    font-size: 18px;
+    transition: 0.4s;
+    border-radius: 50%
+  }
+  .sm a:hover{
+    background: #2c3e50;
+    color: white;
+  }
+  .crad:hover > .front{
+    transform: rotateY(-180deg);
+  }
+  .crad:hover > .back{
+    transform: rotateY(0deg);
+  }
+  
